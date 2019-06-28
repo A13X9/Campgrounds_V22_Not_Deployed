@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+      <h1 class="text-center">Contact</h1>
+      <form action="/contact/send" method="post" id="form">
+        <div class="messages"> </div>
+        <div class="controls">
+          <div class="form-group">
+            <label class="" for="form_name">Name</label>
+            <input type="text" class="form-control" id="form_name" name="name" placeholder="Enter Name" required="required" data-error="Your Name is Required">
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label class="" for="form_phone">Phone</label>
+            <input type="tel" class="form-control" id="form_phone" name="phone" placeholder="Phone" required="required" data-error="Your Phone Number is Required">
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label class="" for="form_email">Email</label>
+            <input type="email" class="form-control" id="form_email" name="email" placeholder="Your Email Address" required="required" data-error="Your Email is Required">
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label class="" for="form_message">Message</label>
+            <textarea class="form-control" id="form_message" name="message" placeholder="Enter Message Here" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <!-- Insert the code for the reCaptcha check box -->
+            <div class="g-recaptcha" data-sitekey="6LdzvloUAAAAAMjcjeoCwdnOYcnUzhrfXUZWIvSw"></div>
+
+          </div>
+          <div class="form-group">
+            <button class="btn btn-lg btn-primary btn-block">Send Email</button>
+          </div>
+      </form>
+      <a href="/campgrounds">Go Back</a>
+      </div>
+    </div>
+  </div>
+
+<% include ../partials/footer %>
